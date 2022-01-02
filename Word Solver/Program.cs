@@ -38,7 +38,7 @@ namespace Word_Solver {
             foreach (string word in words) {
                 if (word.Length == codedWord.Length) {
                     for (int i = 0; i < codedWord.Length; i++) {
-                        if (!word.Contains(codedWord[i])) {
+                        if (!word.Contains(codedWord[i]) || !(codedWord.Contains(word[i]))) {
                             break;
                         } else if (word.Contains(codedWord[i]) && i == codedWord.Length - 1) {
                             return word;
